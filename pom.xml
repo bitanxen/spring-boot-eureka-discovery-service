@@ -5,7 +5,7 @@
 
 	<groupId>in.bitanxen.poc</groupId>
 	<artifactId>spring-boot-eureka-service-discovery</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 
 	<name>spring-boot-eureka-service-discovery</name>
 	<description>Spring Boot Eureka Service Discovery</description>
@@ -69,10 +69,16 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<layers>
+						<enabled>true</enabled>
+					</layers>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
